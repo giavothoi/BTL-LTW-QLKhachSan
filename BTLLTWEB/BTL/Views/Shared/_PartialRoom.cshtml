@@ -1,0 +1,14 @@
+﻿@model Phong
+
+<div class="col-md-4">
+	<div class="hotel-content">
+		<div class="hotel-grid" style="background-image: url(@Url.Content("../images/" + Model.Anh));">
+			<div class="price"><small>For as low as</small><span>@ViewBag.Gia/night</span></div>
+			<a class="book-now text-center" href="#"><i class="ti-calendar"></i> Book Now</a>
+		</div>
+		<div class="desc">
+			<h3><a asp-controller="Room" asp-action="ChiTietPhong" asp-route-maphong="@Model.MaPhong" asp-route-maloai="@Model.MaLp">@Model.TenPhong</a></h3>
+			<h4>@Model.TinhTrang</h4>
+		</div>
+	</div>
+</div>
